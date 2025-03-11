@@ -1,0 +1,332 @@
+
+/* 
+COMO TRABAJAMOS CON CSS
+selector {
+propiedad: valor;
+} */
+
+
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* FONT FACE uso de tipografia descargada */
+@font-face {
+    font-family: "Boston Traffic";
+    src: url(../assets/fonts/boston_traffic.ttf);
+}
+
+/* RESETEO con selector universal, aplica estilos a cada uno de los elementos de los html se recomienda solo para reseteo  */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/*++++++ INICIO *********************/
+
+:root {
+    --main-radius: 7px;
+    --main-padding: 7px;
+}
+
+.container2 {
+    display: grid;
+    height: 80vh;
+    grid-template-columns: 0.7fr 1fr 1fr 1fr 1.3fr;
+    grid-template-rows: 0.5fr 1fr 1fr;
+    grid-template-areas:
+        "nav nav nav nav nav"
+        "sidebar main main main main"
+
+        " sidebar footer footer footer footer";
+    grid-gap: 0.2rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #004d40;
+}
+
+nav {
+    background: rgb(121, 212, 230);
+    grid-area: nav;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+
+
+}
+
+main {
+
+    grid-area: main;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#sidebar {
+    background: #18ffff;
+    grid-area: sidebar;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+footer {
+
+    background: #1de9b6;
+    grid-area: footer;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+.radios {
+
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(252, 252, 252);
+    gap: 20px;
+    padding: 2px;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+#carritoSuma {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+#contenedor {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+#contenedor2 {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+#caja2 {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 20%;
+    width: 150px;
+    height: 60px;
+}
+
+#caja1 {
+    display: auto;
+    background-color: blue;
+    color: black;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 20%;
+    width: 150px;
+    height: 60px;
+}
+
+#caja2 {
+    background-color: blue;
+    color: black;
+}
+
+#ConfirmarCompra {
+    background-color: rgb(176, 238, 60);
+    color: black;
+}
+
+
+
+
+
+
+/*********************************************************************************/
+
+/* HEADER*/
+
+.fondoHeader {
+    background-color: rgb(39, 76, 128);
+}
+
+.navbar {
+    background-color: rgb(121, 212, 230);
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: rgb(0, 3, 3);
+    text-decoration: none;
+    padding: 15px 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 10%;
+    background-color: rgb(214, 226, 229);
+    padding: 20px;
+}
+
+.main-content {
+    display: flex;
+    width: 100%;
+    /*background-image: url(../assets/img/yamahaR1.jpg);  -- OPCIONAL-- */
+    background-color: rgb(255, 255, 255);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    justify-content: space-between;
+    padding: 20px;
+    flex-direction: row;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(247, 246, 246);
+    gap: 20px;
+    padding: 2px;
+    flex-wrap: wrap;
+}
+
+
+
+.caja {
+    display: flex;
+    width: 15%;
+    height: auto;
+    background-color: rgb(76, 166, 226);
+    border: 2px solid rgb(16, 17, 17);
+    text-align: center;
+    line-height: 100px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+
+.card {
+    display: flex;
+    background-color: rgb(191, 221, 241);
+    border: 2px solid rgb(16, 17, 17);
+    width: 20%;
+    height: auto;
+    text-align: center;
+    justify-content: space-between;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+/*align-items: stretch;*/
+
+
+/***********************************************/
+
+
+/* BODY ---> HERENCIA al aplicarla en la etiqueta BODY afecta a todos los elementos de todos los html */
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.encabezadoMayuscula {
+    text-transform: uppercase;
+    /* cambio a mayusculas */
+}
+
+.fondoFooter {
+    background-color: rgb(129, 139, 231);
+}
+
+.fondoFooter .redesSociales {
+    color: rgb(22, 21, 21);
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* USO ETIQUETA SPAN  */
+.direccion span {
+    font-weight: 700;
+    color: rgb(47, 24, 140);
+}
+
+
+
+/**********************************************************************/
+
+
+/****DESKTOP***  font-size:1.25rem; */
+@media only screen and (max-width:800px) {
+    .container2 {
+        font-size: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 4fr 0.2fr;
+        grid-template-areas:
+            "nav"
+            "sidebar"
+            "main"
+            "footer";
+
+    }
+
+}
+
+/**** MOVIL *** font-size:1.25rem;*/
+@media only screen and (max-width:550px) {
+    .container2 {
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 4fr 0.2fr;
+        grid-template-areas:
+            "nav"
+            "sidebar"
+            "main"
+            "footer";
+
+    }
+
+}
+
+
+
+.counter {
+    font-size: 24px;
+    margin: 0 15px;
+    vertical-align: middle;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+}
